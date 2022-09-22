@@ -26,18 +26,13 @@ int min = UserChoise();
 Text("Введите максимальное значение в массиве: ");
 int max = UserChoise();
 Console.Clear();
-// int[,] array = FillArray(heigth, width, min, max);
-// Text("Среднее арифметическое каждого столбца: ");
-// double array1 = ArithmeticMean(array);
-// PrintArray2(array1);
 
-Random random = new Random();
 int[,] arr = new int[heigth, width];
 for (int i = 0; i < arr.GetLength(0); i++)
 {
     for (int j = 0; j < arr.GetLength(1); j++)
     {
-        arr[i, j] = random.Next(min, max);
+        arr[i, j] = new Random().Next(min, max);
         Console.Write(arr[i, j] + " ");
     }
     Console.WriteLine();
